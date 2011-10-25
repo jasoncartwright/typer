@@ -1,0 +1,25 @@
+{% extends 'page.html' %}
+
+{% block content %}
+
+	<h1>Typer - {{ charset.name|escape }}</h1>
+	
+	<form action="" method="get">
+		<p>{{ charset.description|escape }}</p>
+		<input type="text" name="text" value="{{ text|escape }}" />
+		<button class="btn"><span><span>
+			{% if charset.button_text %}
+				{{ charset.button_text|escape }}
+			{% else %}
+				Create
+			{% endif %}
+		</span></span></button>
+	</form>
+	
+	{% if text %}
+		<div id="imagetext">
+			{% for image in images %}<img src="{{ image }}={{ charset.image_size|escape }}">{% endfor %}
+		</div>
+	{% endif %}
+	
+{% endblock %}

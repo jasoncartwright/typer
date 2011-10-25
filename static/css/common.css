@@ -1,0 +1,102 @@
+body {
+	background:#fff;
+	color:#000;
+	font-size:13px;
+	font-family:Helvetica,Arial,sans-serif;
+	line-height: 1.3em;
+}
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+	font-family: 'Open Sans',sans-serif;
+}
+#imagetext {
+	margin-top:20px;
+	overflow:visible;
+}
+#imagetext img {
+	display:block;
+	float:left;
+	border:0;
+}
+
+
+/* BTN */
+.btn {
+	display:inline-block;
+	background:none;
+	margin: 5px 0;
+	padding:3px 0;
+	border-width:0;
+	overflow:visible;
+	font:100%/1.2 Arial,Sans-serif;
+	color:#333;
+	cursor:pointer;
+ }
+* html button.btn {
+	padding-bottom:1px;
+  }
+.btn span {
+	background:-webkit-gradient(linear,0% 40%,0% 70%,from(#F9F9F9),to(#E3E3E3));
+	background:-moz-linear-gradient(center top , #F9F9F9, #E3E3E3);
+	margin:0;
+	padding:3px 0;
+	border-left:1px solid #bbb;
+	border-right:1px solid #aaa;
+	color:#000;
+}
+* html .btn span {
+	padding-top:0;
+}
+.btn span span {
+	position:relative;
+	padding:3px .4em;
+	border-width:0;
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #aaa;
+}
+button.pill-l span {
+	border-right-width:0;
+}
+button.pill-l span span {
+	border-right:1px solid #bbb;
+}
+button.pill-c span {
+	border-right-style:none;
+	border-left-color:#fff;
+}
+button.pill-c span span {
+  border-right:1px solid #bbb;
+  }
+button.pill-r span {
+	border-left-color:#fff;
+}
+.btn:hover span, .btn:hover span span, .btn:focus span, .btn:focus span span {
+	cursor:pointer;
+	border-color:#939393 !important;
+	color:#000;
+}
+.btn:active span {
+	background-position:0 -400px;
+	outline:none;
+}
+.btn:focus, .btn:active {
+	outline:none;
+}
+.btn.primary {
+	font-weight:bold;
+	color:#000;
+}
+.btn.minor {
+	font-size:80%;
+}
+.btn.minor span {
+    padding:2px 0;
+}
+.btn.minor span span {
+    padding:2px 2px;
+}
+.btn.markcompleted span span {
+    background:url("/static/img/completed.png") no-repeat 4px center;
+    padding-left:21px;
+}

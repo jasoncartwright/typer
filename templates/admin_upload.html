@@ -1,0 +1,13 @@
+{% extends 'page.html' %}
+
+{% block content %}
+	
+	<h1>Admin Upload</h1>
+	
+	<form action="{{ upload_url }}" method="post" enctype="multipart/form-data">
+		Character: <input type="text" maxlength="1" name="character"><br>
+		Image: <input type="file" name="file"><br>
+		<button type="submit" class="btn"><span><span>Upload</span></span></button>
+	</form>
+	
+{% endblock %}

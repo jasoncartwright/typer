@@ -1,0 +1,18 @@
+{% extends 'page.html' %}
+
+{% block content %}
+	<h1>Character Set {{ charset.name|escape }}</h1>
+	
+	<a class="btn" href="/admin/{{ charset.key }}/upload/"><span><span>Upload Character</span></span></a>
+	
+	{% if characters %}
+		<ul>
+			{% for character in characters %}
+				<li>{{ character.character }} <a href="{{ character.image_url }}"><img src="{{ character.image_url }}=s100" alt="{{ character.character }}"></a></li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>No characters yet</p>
+	{% endif %}
+	
+{% endblock %}

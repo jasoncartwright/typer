@@ -1,0 +1,20 @@
+{% extends 'page.html' %}
+
+{% block content %}
+	
+	<h1>Admin</h1>
+	
+	{% if character_sets %}
+		<ul>
+			{% for character_set in character_sets %}
+				<li><a href="/admin/{{ character_set.key }}/">{{ character_set.name|escape }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	
+	<form action="" method="post">
+		Name: <input type="text" name="name"><br>
+		<button type="submit" href="/admin/upload/" class="btn"><span><span>Add Character Set</span></span></button>
+	</form>
+	
+{% endblock %}
